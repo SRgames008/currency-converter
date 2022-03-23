@@ -41,14 +41,14 @@ function convertCurrency(currency) {
       // Use the argument and the currency dictionary to convert values
   usd = Math.round(base / currDict[currency] * currDict["usd"] * 100) / 100;
   euro = Math.round(base / currDict[currency] * currDict["euro"] * 100) / 100;
-  pound = base / currDict[currency] * currDict["pound"];
-  cad = base / currDict[currency] * currDict["cad"];
-  rupee = base / currDict[currency] * currDict["rupee"];
-    franc = base / currDict[currency] * currDict["franc"]
-  krona = base / currDict[currency] * currDict["krona"];
-  ukraine = base / currDict[currency] * currDict["ukraine"];
-  real = base / currDict[currency] * currDict["real"];
-  sing = base / currDict[currency] * currDict["sing"];
+  pound = Math.round(base / currDict[currency] * currDict["pound"] * 100) / 100;
+  cad = Math.round(base / currDict[currency] * currDict["cad"] * 100) / 100;
+  rupee = Math.round(base / currDict[currency] * currDict["rupee"] * 100) / 100;
+  franc = Math.round(base / currDict[currency] * currDict["franc"] * 100) / 100;
+  krona = Math.round(base / currDict[currency] * currDict["krona"] * 100) / 100;
+  ukraine = Math.round(base / currDict[currency] * currDict["ukraine"] * 100) / 100;
+  real = Math.round(base / currDict[currency] * currDict["real"] * 100) / 100;
+  sing = Math.round(base / currDict[currency] * currDict["sing"] * 100) / 100;
   bitcoin = base / currDict[currency] * currDict["bitcoin"];
       // If the user pressed enter, update the values
   if (event.keyCode === 13) {
