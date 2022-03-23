@@ -40,7 +40,7 @@ function convertCurrency(currency) {
     "mc" : 150,
     "vb" : 100,
     
-    "bitcoin" : 0.000023
+    "bitcoin" : 0.000023,
   };
 
   // Use the argument of convertCurrency to determine which value to get from the page
