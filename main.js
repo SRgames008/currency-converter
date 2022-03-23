@@ -13,12 +13,16 @@ function reset() {
   document.getElementById('real').value = '';
   document.getElementById('sing').value = '';
   
+  document.getElementById('robux').value = '';
+  document.getElementById('mc').value = '';
+  document.getElementById('vb').value = '';
+  
   document.getElementById('bitcoin').value = '';
 }
 // This function will convert the user input into different units of currency by checking what field the user fills out
 function convertCurrency(currency) {
   // Declare variables for each unit of currency
-  var usd, euro, pound, cad, rupee, bitcoin, franc, krona, ukraine, real, sing, base;
+  var usd, euro, pound, cad, rupee, bitcoin, franc, krona, ukraine, real, sing, robux, mc, vb, base;
   // Create a dictionary to easily construct conversion ratios
   var currDict = {
     "usd" : 1.00,
@@ -32,6 +36,9 @@ function convertCurrency(currency) {
     "ukraine" : 29.33,
     "real" : 4.92,
     "sing" : 1.36,
+    "robux" : 80,
+    "mc" : 150,
+    "vb" : 100,
     
     "bitcoin" : 0.000023
   };
@@ -49,6 +56,9 @@ function convertCurrency(currency) {
   ukraine = Math.round(base / currDict[currency] * currDict["ukraine"] * 100) / 100;
   real = Math.round(base / currDict[currency] * currDict["real"] * 100) / 100;
   sing = Math.round(base / currDict[currency] * currDict["sing"] * 100) / 100;
+    robux = Math.round(base / currDict[currency] * currDict["robux"] * 100) / 100;
+  mc = Math.round(base / currDict[currency] * currDict["mc"] * 100) / 100;
+  vb = Math.round(base / currDict[currency] * currDict["vb"] * 100) / 100;
   bitcoin = base / currDict[currency] * currDict["bitcoin"];
       // If the user pressed enter, update the values
   if (event.keyCode === 13) {
@@ -63,6 +73,10 @@ function convertCurrency(currency) {
     document.getElementById("ukraine").value = ukraine;
     document.getElementById("real").value = real;    
     document.getElementById("sing").value = sing;
+    
+    document.getElementById("robux").value = robux;
+    document.getElementById("mc").value = mc;    
+    document.getElementById("vb").value = vb;
     document.getElementById("bitcoin").value = bitcoin;
   }
 }
