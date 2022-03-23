@@ -39,7 +39,7 @@ function convertCurrency(currency) {
   // Use the argument of convertCurrency to determine which value to get from the page
   base = document.getElementById(currency).value;
       // Use the argument and the currency dictionary to convert values
-  usd = base / currDict[currency] * currDict["usd"]
+  usd = Math.round(base / currDict[currency] * currDict["usd"] * 100) / 100
   euro = base / currDict[currency] * currDict["euro"];
   pound = base / currDict[currency] * currDict["pound"];
   cad = base / currDict[currency] * currDict["cad"];
