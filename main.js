@@ -14,7 +14,7 @@ function reset() {
   document.getElementById('sing').value = '';
   
   document.getElementById('robux').value = '';
-  document.getElementById('mc').value = '';
+  document.getElementById('MC').value = '';
   document.getElementById('vb').value = '';
   
   document.getElementById('bitcoin').value = '';
@@ -36,9 +36,9 @@ function convertCurrency(currency) {
     "ukraine" : 29.33,
     "real" : 4.92,
     "sing" : 1.36,
-    "robux" : 80,
-    "mc" : 150,
-    "vb" : 100,
+    "robux" : 80.00,
+    "MC" : 150.00,
+    "vb" : 100.00,
     
     "bitcoin" : 0.000023,
   };
@@ -56,8 +56,8 @@ function convertCurrency(currency) {
   ukraine = Math.round(base / currDict[currency] * currDict["ukraine"] * 100) / 100;
   real = Math.round(base / currDict[currency] * currDict["real"] * 100) / 100;
   sing = Math.round(base / currDict[currency] * currDict["sing"] * 100) / 100;
-    robux = Math.round(base / currDict[currency] * currDict["robux"] * 100) / 100;
-  mc = Math.round(base / currDict[currency] * currDict["mc"] * 100) / 100;
+  robux = Math.round(base / currDict[currency] * currDict["robux"] * 100) / 100;
+  MC = Math.round(base / currDict[currency] * currDict["MC"] * 100) / 100;
   vb = Math.round(base / currDict[currency] * currDict["vb"] * 100) / 100;
   bitcoin = base / currDict[currency] * currDict["bitcoin"];
       // If the user pressed enter, update the values
@@ -75,7 +75,7 @@ function convertCurrency(currency) {
     document.getElementById("sing").value = sing;
     
     document.getElementById("robux").value = robux;
-    document.getElementById("mc").value = mc;    
+    document.getElementById("mc").value = MC;    
     document.getElementById("vb").value = vb;
     document.getElementById("bitcoin").value = bitcoin;
   }
